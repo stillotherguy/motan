@@ -83,7 +83,7 @@ public class RefererConfigBean<T> extends RefererConfig<T> implements FactoryBea
                 }
                 if (MotanNamespaceHandler.basicRefererConfigDefineNames.size() == 1) {
                     setBasicReferer(biConfig);
-                } else if (biConfig.isDefault() != null && biConfig.isDefault().booleanValue()) {
+                } else if (Boolean.TRUE.equals(biConfig.isDefault())) {
                     setBasicReferer(biConfig);
                 }
             }
@@ -106,7 +106,7 @@ public class RefererConfigBean<T> extends RefererConfig<T> implements FactoryBea
                 }
                 if (MotanNamespaceHandler.protocolDefineNames.size() == 1) {
                     setProtocol(pc);
-                } else if (pc.isDefault() != null && pc.isDefault().booleanValue()) {
+                } else if (Boolean.TRUE.equals(pc.isDefault())) {
                     setProtocol(pc);
                 }
             }
@@ -132,7 +132,7 @@ public class RefererConfigBean<T> extends RefererConfig<T> implements FactoryBea
                 }
                 if (MotanNamespaceHandler.registryDefineNames.size() == 1) {
                     setRegistry(rc);
-                } else if (rc.isDefault() != null && rc.isDefault().booleanValue()) {
+                } else if (Boolean.TRUE.equals(rc.isDefault())) {
                     setRegistry(rc);
                 }
             }

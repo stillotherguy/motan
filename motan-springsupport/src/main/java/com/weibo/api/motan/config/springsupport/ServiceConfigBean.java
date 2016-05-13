@@ -103,8 +103,9 @@ public class ServiceConfigBean<T> extends ServiceConfig<T>
                 }
                 if (MotanNamespaceHandler.basicServiceConfigDefineNames.size() == 1) {
                     setBasicServiceConfig(biConfig);
-                } else if (biConfig.isDefault() != null && biConfig.isDefault().booleanValue()) {
+                } else if (Boolean.TRUE.equals(biConfig.isDefault())) {
                     setBasicServiceConfig(biConfig);
+                    break;
                 }
             }
         }
@@ -150,7 +151,7 @@ public class ServiceConfigBean<T> extends ServiceConfig<T>
                 }
                 if (MotanNamespaceHandler.registryDefineNames.size() == 1) {
                     setRegistry(rc);
-                } else if (rc.isDefault() != null && rc.isDefault().booleanValue()) {
+                } else if (Boolean.TRUE.equals(rc.isDefault())) {
                     setRegistry(rc);
                 }
             }
